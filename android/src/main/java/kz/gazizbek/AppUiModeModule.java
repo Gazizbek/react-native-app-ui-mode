@@ -1,6 +1,7 @@
-package com.reactnativeappuimode;
+package kz.gazizbek;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -22,6 +23,16 @@ public class AppUiModeModule extends ReactContextBaseJavaModule {
         return NAME;
     }
 
+    @ReactMethod
+    public void setStyle(String mode) {
+        int m = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+        if (mode.equals("dark")) {
+            m = AppCompatDelegate.MODE_NIGHT_YES;
+        } else if (mode.equals("light")) {
+            m = AppCompatDelegate.MODE_NIGHT_NO;
+        }
+        AppCompatDelegate.setDefaultNightMode(m);
+    }
 
     // Example method
     // See https://reactnative.dev/docs/native-modules-android

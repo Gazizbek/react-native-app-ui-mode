@@ -6,16 +6,19 @@ React Native App User Interface Mode
 
 ```sh
 npm install react-native-app-ui-mode
+or
+yarn add react-native-app-ui-mode
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-app-ui-mode";
+import AppUiMode from 'react-native-app-ui-mode';
 
 // ...
 
-const result = await multiply(3, 7);
+//"dark" | "light" | "system"
+AppUiMode.setStyle('dark');
 ```
 
 ## Contributing

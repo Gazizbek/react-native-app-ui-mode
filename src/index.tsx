@@ -20,3 +20,5 @@ const AppUiMode = NativeModules.AppUiMode
 export function multiply(a: number, b: number): Promise<number> {
   return AppUiMode.multiply(a, b);
 }
+
+export default AppUiMode;

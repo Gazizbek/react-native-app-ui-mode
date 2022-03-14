@@ -1,4 +1,4 @@
-package com.reactnativeappuimode;
+package kz.gazizbek;
 
 import androidx.annotation.NonNull;
 
